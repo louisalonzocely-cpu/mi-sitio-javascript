@@ -8,21 +8,31 @@
 </head>
 <body>
     
-    <header>
-        <h1>Conociendo JavaScript</h1>
-        <p>
+    <header class="header">
+        <div class="header__brand">
+            <h1 class="header__title">Conociendo JavaScript</h1>
+            <img src="img/javascript-1.webp" alt="Logo JavaScript" class="header__logo">
+        </div>
+        <p class="header__text">
             En este sitio mostraremos que es el lenguaje de programacion JavaScript,
             y cómo se puede utilizar para crear experiencias interactivas en la web.
         </p>
     </header>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">¿Que es JavaScript?</a></li>
+            <li class="nav__item"><a href="fundamentos.html" class="nav__link">Fundamento en JavaScript</a></li>
+            <li class="nav__item"><a href="control.html" class="nav__link">Control de Flujos con JavaScript</a></li>
+        </ul>
+    </nav>
    
-    <main>
-        <section id="temas">
-            <h2>¿Qué es JavaScript y para qué se utiliza?</h2>
-            <p>JavaScript es un lenguaje de programación que se utiliza principalmente para crear contenido dinámico en páginas web, 
+    <main class="main">
+        <section class="section" id="temas">
+            <h2 class="section__title">¿Qué es JavaScript y para qué se utiliza?</h2>
+            <p class="section__text">JavaScript es un lenguaje de programación que se utiliza principalmente para crear contenido dinámico en páginas web, 
             como animaciones, formularios interactivos, juegos y aplicaciones web. También se puede utilizar en el desarrollo de 
             aplicaciones móviles y de escritorio.</p>
-            </p>
         </section>
 
         <section>   
@@ -30,6 +40,10 @@
             <p>JavaScript se ejecuta en el navegador del usuario, lo que significa que puede interactuar con la página web y responder a las acciones del usuario en tiempo real. 
             Esto permite crear experiencias interactivas y personalizadas para cada usuario. </p>
             
+        <section class="section">   
+            <h2 class="section__title">¿Cómo funciona JavaScript?</h2>
+            <p class="section__text">JavaScript se ejecuta en el navegador del usuario, lo que significa que puede interactuar con la página web y responder a las acciones del usuario en tiempo real. 
+            Esto permite crear experiencias interactivas y personalizadas para cada usuario, </p>
         </section>
 
         <section>
@@ -67,6 +81,12 @@
             <p>Utilizando estructuras de control, como las sentencias if y else, se puede hacer que un programa tome decisiones basadas en ciertas condiciones.</p>
         </section>
     </main>
+
+    <footer class="footer">
+        <p class="footer__text">Programa ADSO - Ficha 3230489 - <img class="logo-sena" src="img/logo-sena-verde-png.webp" alt="logo del sena"></p>
+        <p class="footer__text">Integrantes: Juan Sebastián Cardona y Luis Alonso Cely</p>
+        <p class="footer__text">© 2026 Mi Sitio JavaScript <img class="logo-javascript" src="img/javascript-1.webp" alt="logo JavaScript"></p>
+    </footer>
 
 </body>
 </html>
