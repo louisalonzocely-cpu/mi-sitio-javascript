@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Mi Sitio JavaScript - Fundamentos</title>
+</head>
+<body>
+
+    <header>
+        <h1>Fundamentos de JavaScript</h1>
+        <p>
+            En esta sección aprenderemos los conceptos básicos de JavaScript:
+            variables, tipos de datos, operadores y funciones.
+        </p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">¿Que es JavaScript?</a></li>
+            <li><a href="fundamentos.html">Fundamento en JavaScript</a></li>
+            <li><a href="control.html">Control de Flujos con JavaScript</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>¿Qué son las variables?</h2>
+            <p>
+                Las variables son contenedores que almacenan datos. En JavaScript
+                se declaran con <strong>let</strong>, <strong>const</strong> o <strong>var</strong>.
+            </p>
+            <pre><code>
+            let nombre = "Juan";
+            const edad = 20;
+            var curso = "ADSO";</code></pre>
+            <p>
+                <strong>let</strong>: permite reasignar su valor.<br>
+                <strong>const</strong>: su valor no puede cambiar después de declararlo.<br>
+                <strong>var</strong>: forma antigua, se recomienda evitar su uso.
+            </p>
+        </section>
+
+        <section>
+            <h2>Tipos de datos</h2>
+            <p>
+                JavaScript maneja varios tipos de datos primitivos:
+            </p>
+        <pre><code>
+        // String - Cadenas de texto
+        let texto = "Hola mundo";
+
+        // Number - Números (enteros y decimales)
+        let entero = 10;
+        let decimal = 9.5;
+
+        // Boolean - Verdadero o falso
+        let activo = true;
+
+        // Undefined - Variable sin valor
+        let sinValor;
+
+        // Null - Valor vacío intencional
+        let vacio = null;
+
+        // Object - Objeto con propiedades
+        let persona = {
+            nombre: "Luis",
+            edad: 22
+        };
+
+        // Array - Lista de valores
+        let colores = ["rojo", "azul", "verde"];</code></pre>
+        </section>
+
+        <section>
+            <h2>Operadores</h2>
+            <p>
+                Los operadores permiten realizar operaciones sobre datos.
+            </p>
+
+            <h3>Operadores aritméticos</h3>
+            <pre><code>
+            let a = 10;
+            let b = 3;
+
+            console.log(a + b);  // 13 - Suma
+            console.log(a - b);  // 7  - Resta
+            console.log(a * b);  // 30 - Multiplicación
+            console.log(a / b);  // 3.33 - División
+            console.log(a % b);  // 1 - Residuo
+            console.log(a ** b); // 1000 - Potencia</code></pre>
+
+            <h3>Operadores de comparación</h3>
+            <pre><code>
+            let x = 5;
+
+            console.log(x == "5");   // true  - Igual (solo valor)
+            console.log(x === "5");  // false - Igual estricto (valor y tipo)
+            console.log(x != 3);     // true  - Diferente
+            console.log(x > 3);      // true  - Mayor que
+            console.log(x <= 10);    // true  - Menor o igual que</code></pre>
+
+            <h3>Operadores lógicos</h3>
+            <pre><code>let edad = 25;
+            let tieneCertificado = true;
+
+            console.log(edad >= 18 && tieneCertificado);  // true  - AND
+            console.log(edad < 18 || tieneCertificado);   // true  - OR
+            console.log(!(edad < 18));                    // true  - NOT</code></pre>
+        </section>
+
+        <section>
+            <h2>Funciones</h2>
+            <p>
+                Las funciones permiten agrupar código reutilizable.
+                Se pueden declarar de dos formas principales:
+            </p>
+
+            <h3>Declaración de función</h3>
+            <pre><code>
+                function saludar(nombre) {
+                return "Hola, " + nombre;
+            }
+
+            console.log(saludar("Juan"));</code></pre>
+
+                        <h3>Expresión de función</h3>
+            <pre><code>const sumar = function(a, b) {
+                return a + b;
+            };
+
+            console.log(sumar(4, 6));</code></pre>
+
+            <h3>Función flecha (ES6)</h3>
+            <pre><code>const multiplicar = (a, b) => a * b;
+            console.log(multiplicar(3, 5));</code></pre>
+        </section>
+
+        <section>
+            <h2>Interacción con el navegador</h2>
+            <p>
+                JavaScript puede mostrar información al usuario mediante
+                diferentes métodos del navegador.
+            </p>
+            <pre><code>// Ventana emergente
+            alert("¡Hola!");
+
+            // Cuadro de entrada
+            let nombre = prompt("¿Cuál es tu nombre?");
+
+            // Mensaje en consola del navegador
+            console.log("Nombre: " + nombre);</code></pre>
+        </section>
+
+        <section>
+            <h2>Resumen</h2>
+            <p>
+                <strong>Variables:</strong> let, const y var para almacenar datos.<br>
+                <strong>Tipos:</strong> string, number, boolean, null, undefined, object, array.<br>
+                <strong>Operadores:</strong> aritméticos, de comparación y lógicos.<br>
+                <strong>Funciones:</strong> declaración, expresión y flecha.<br>
+                <strong>Navegador:</strong> alert, prompt y console.log.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Programa ADSO - Ficha 3230489</p>
+        <p>Integrantes: Juan Sebastián Cardona y Luis Alonso Cely</p>
+        <p>© 2026 Mi Sitio JavaScript</p>
+    </footer>
+
+</body>
+</html>
