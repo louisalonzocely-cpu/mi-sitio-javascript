@@ -1,0 +1,124 @@
+@import url("estilos.css");
+
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    align-self: flex-start;
+    position: sticky;
+    top: 17rem;
+    padding: 0 0.5rem;
+}
+
+.sidebar__title {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.sidebar__link {
+    display: block;
+    padding: 0.45rem 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar__link:hover {
+    background: var(--color-light);
+    color: var(--color-primary);
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section,
+.section__principal {
+    scroll-margin-top: 18rem;
+}
+
+.section h3 {
+    color: var(--color-secondary);
+    margin: 1.25rem 0 0.5rem;
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+.section p {
+    text-align: left;
+}
+
+.section pre {
+    background: var(--color-dark);
+    color: #e0e0e0;
+    text-align: left;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.75rem 0;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.section pre code {
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        flex: none;
+        width: 100%;
+    }
+
+    .sidebar__nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar__link {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .section,
+    .section__principal {
+        scroll-margin-top: 30rem;
+    }
+}
