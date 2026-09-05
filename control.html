@@ -3,59 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/control.css">
     <title>Mi Sitio JavaScript - Estructuras de Control</title>
 </head>
 <body>
 
-    <header>
-        <h1>Estructuras de Control en JavaScript</h1>
-        <p>
-            Las estructuras de control permiten ejecutar diferentes bloques de código
-            según condiciones o repetir tareas de forma automática.
-        </p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">¿Que es JavaScript?</a></li>
-            <li><a href="fundamentos.html">Fundamento en JavaScript</a></li>
-            <li><a href="control.html">Control de Flujos con JavaScript</a></li>
-        </ul>
-    </nav>
-
-    <main>
-
-        <section>
-            <h2>¿Qué son las estructuras de control?</h2>
-            <p>
-                Son instrucciones que permiten al programador decidir qué código ejecutar
-                y en qué orden. Con ellas se pueden tomar decisiones, repetir acciones
-                y controlar el flujo de un programa.
+    <div class="header-sticky">
+        <header class="header">
+            <div class="header__brand">
+                <h1 class="header__title">Estructuras de Control en JavaScript</h1>
+                <img src="img/javascript-1.webp" alt="Logo JavaScript" class="header__logo">
+                <button id="botonModo" class="modo-btn" aria-label="Cambiar modo claro/oscuro">🌙</button>
+            </div>
+            <p class="header__text">
+                Las estructuras de control permiten ejecutar diferentes bloques de código
+                según condiciones o repetir tareas de forma automática.
             </p>
-        </section>
+        </header>
 
-        <section>
-            <h2>if - else</h2>
-            <p>
-                Permite ejecutar un bloque de código si una condición es verdadera,
-                y otro bloque si es falsa.
-            </p>
-<pre><code>let edad = 18;
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">¿Que es JavaScript?</a></li>
+                <li class="nav__item"><a href="fundamentos.html" class="nav__link">Fundamento en JavaScript</a></li>
+                <li class="nav__item"><a href="control.html" class="nav__link">Control de Flujos con JavaScript</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <h2 class="sidebar__title">Temas</h2>
+            <nav class="sidebar__nav">
+                <a href="#estructuras" class="sidebar__link">¿Qué son las estructuras de control?</a>
+                <a href="#if-else" class="sidebar__link">if - else</a>
+                <a href="#if-else-if" class="sidebar__link">if - else if - else</a>
+                <a href="#switch" class="sidebar__link">switch</a>
+                <a href="#for" class="sidebar__link">for</a>
+                <a href="#while" class="sidebar__link">while</a>
+                <a href="#do-while" class="sidebar__link">do - while</a>
+                <a href="#break-continue" class="sidebar__link">break y continue</a>
+                <a href="#resumen" class="sidebar__link">Resumen</a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <section class="section" id="estructuras">
+                <h2 class="section__title">¿Qué son las estructuras de control?</h2>
+                <p>
+                    Son instrucciones que permiten al programador decidir qué código ejecutar
+                    y en qué orden. Con ellas se pueden tomar decisiones, repetir acciones
+                    y controlar el flujo de un programa.
+                </p>
+            </section>
+
+            <section class="section" id="if-else">
+                <h2 class="section__title">if - else</h2>
+                <p>
+                    Permite ejecutar un bloque de código si una condición es verdadera,
+                    y otro bloque si es falsa.
+                </p>
+                <pre><code>let edad = 18;
 
 if (edad >= 18) {
     console.log("Eres mayor de edad");
 } else {
     console.log("Eres menor de edad");
 }</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>if - else if - else</h2>
-            <p>
-                Permite evaluar múltiples condiciones en secuencia.
-            </p>
-<pre><code>let nota = 85;
+            <section class="section" id="if-else-if">
+                <h2 class="section__title">if - else if - else</h2>
+                <p>
+                    Permite evaluar múltiples condiciones en secuencia.
+                </p>
+                <pre><code>let nota = 85;
 
 if (nota >= 90) {
     console.log("Excelente");
@@ -66,14 +87,14 @@ if (nota >= 90) {
 } else {
     console.log("Necesita mejorar");
 }</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>switch</h2>
-            <p>
-                Permite seleccionar entre varias opciones basándose en el valor de una variable.
-            </p>
-<pre><code>let dia = "lunes";
+            <section class="section" id="switch">
+                <h2 class="section__title">switch</h2>
+                <p>
+                    Permite seleccionar entre varias opciones basándose en el valor de una variable.
+                </p>
+                <pre><code>let dia = "lunes";
 
 switch (dia) {
     case "lunes":
@@ -89,53 +110,53 @@ switch (dia) {
     default:
         console.log("Día entre semana");
 }</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>for</h2>
-            <p>
-                Bucle que repite un bloque de código un número determinado de veces.
-            </p>
-<pre><code>for (let i = 1; i <= 5; i++) {
+            <section class="section" id="for">
+                <h2 class="section__title">for</h2>
+                <p>
+                    Bucle que repite un bloque de código un número determinado de veces.
+                </p>
+                <pre><code>for (let i = 1; i <= 5; i++) {
     console.log("Iteración: " + i);
 }</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>while</h2>
-            <p>
-                Repite un bloque de código mientras la condición sea verdadera.
-                Se evalúa antes de cada iteración.
-            </p>
-<pre><code>let contador = 0;
+            <section class="section" id="while">
+                <h2 class="section__title">while</h2>
+                <p>
+                    Repite un bloque de código mientras la condición sea verdadera.
+                    Se evalúa antes de cada iteración.
+                </p>
+                <pre><code>let contador = 0;
 
 while (contador < 5) {
     console.log("Contador: " + contador);
     contador++;
 }</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>do - while</h2>
-            <p>
-                Similar al while, pero ejecuta el bloque al menos una vez
-                antes de evaluar la condición.
-            </p>
-<pre><code>let num = 1;
+            <section class="section" id="do-while">
+                <h2 class="section__title">do - while</h2>
+                <p>
+                    Similar al while, pero ejecuta el bloque al menos una vez
+                    antes de evaluar la condición.
+                </p>
+                <pre><code>let num = 1;
 
 do {
     console.log("Número: " + num);
     num++;
 } while (num <= 5);</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>break y continue</h2>
-            <p>
-                <strong>break</strong> detiene el bucle completamente.<br>
-                <strong>continue</strong> salta a la siguiente iteración.
-            </p>
-<pre><code>// break: detener en el 3
+            <section class="section" id="break-continue">
+                <h2 class="section__title">break y continue</h2>
+                <p>
+                    <strong>break</strong> detiene el bucle completamente.<br>
+                    <strong>continue</strong> salta a la siguiente iteración.
+                </p>
+                <pre><code>// break: detener en el 3
 for (let i = 1; i <= 5; i++) {
     if (i === 3) break;
     console.log(i); // 1, 2
@@ -146,24 +167,32 @@ for (let i = 1; i <= 5; i++) {
     if (i === 3) continue;
     console.log(i); // 1, 2, 4, 5
 }</code></pre>
-        </section>
+            </section>
 
-        <section>
-            <h2>Resumen</h2>
-            <p>
-                <strong>Condicionales:</strong> if/else y switch para tomar decisiones.<br>
-                <strong>Bucles:</strong> for, while y do-while para repetir tareas.<br>
-                <strong>Control:</strong> break y continue para modificar el flujo dentro de los bucles.
-            </p>
-        </section>
+            <section class="section__principal" id="resumen">
+                <h2 class="section__title">Resumen</h2>
+                <p>
+                    <strong>Condicionales:</strong> if/else y switch para tomar decisiones.<br>
+                    <strong>Bucles:</strong> for, while y do-while para repetir tareas.<br>
+                    <strong>Control:</strong> break y continue para modificar el flujo dentro de los bucles.
+                </p>
+            </section>
+        </main>
+    </div>
 
-    </main>
-
-    <footer>
-        <p>Programa ADSO - Ficha 3230489</p>
-        <p>Integrantes: Juan Sebastián Cardona y Luis Alonso Cely</p>
-        <p>© 2026 Mi Sitio JavaScript</p>
+    <footer class="footer">
+        <p class="footer__text">Programa ADSO - Ficha 3230489 - <img class="logo-sena" src="img/logo-sena-verde-png.webp" alt="logo del sena"></p>
+        <p class="footer__text">Integrantes: Juan Sebastián Cardona y Luis Alonso Cely</p>
+        <p class="footer__text">© 2026 Mi Sitio JavaScript <img class="logo-javascript" src="img/javascript-1.webp" alt="logo JavaScript"></p>
     </footer>
+
+    <script>
+        const botonModo = document.getElementById('botonModo');
+        botonModo.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            botonModo.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+    </script>
 
 </body>
 </html>
