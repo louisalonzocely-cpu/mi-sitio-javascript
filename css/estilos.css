@@ -8,6 +8,13 @@
     --color-yellow: yellow;
 }
 
+body.dark {
+    --color-dark: #111;
+    --color-light: #1e1e1e;
+    --color-white: #2a2a2a;
+    --color-text: #e0e0e0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +28,21 @@ body {
     background-color: var(--color-light);
 }
 
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 .header {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     color: var(--color-white);
     padding: 2rem;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header__brand {
@@ -34,6 +51,7 @@ body {
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .header__title {
@@ -44,6 +62,36 @@ body {
 .header__logo {
     width: 60px;
     height: auto;
+}
+
+.modo-btn {
+    position: absolute;
+    right: 0;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-white);
+    font-size: 1.3rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contador__btn, .contador__numero {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+
+.modo-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
 .header__text {
@@ -65,6 +113,8 @@ body {
     background-color: var(--color-dark);
     padding: 1rem 2rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 100;
 }
 
 .nav__list {
@@ -79,7 +129,7 @@ body {
 }
 
 .nav__link {
-    color: var(--color-light);
+    color: #f5f5f5;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -109,28 +159,76 @@ body {
 }
 
 .main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
 }
 
 .section {
     background: var(--color-white);
+    text-align: center;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    border-top: 5px solid var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.25);
+    border-top-color: var(--color-secondary);
 }
 
 .section__title {
     color: var(--color-primary);
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-light);
+    transition: color 0.3s ease;
+}
+
+.section:hover .section__title {
+    color: var(--color-secondary);
+}
+
+.section__principal {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    text-align: center;
+    padding: 3rem;
+    border-radius: 12px;
+    border-top: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section__principal .section__title {
+    color: var(--color-white);
+    border-bottom: none;
+}
+
+.section__principal .section__title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--color-yellow);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
 }
 
 .footer {
     background-color: var(--color-dark);
-    color: var(--color-white);
+    color: #f5f5f5;
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
@@ -139,4 +237,10 @@ body {
 .footer__text {
     margin: 0.3rem 0;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
 }

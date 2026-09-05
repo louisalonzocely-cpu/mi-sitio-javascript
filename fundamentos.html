@@ -8,21 +8,26 @@
 </head>
 <body>
 
-    <header class="header">
-        <h1>Fundamentos de JavaScript</h1>
-        <p>
-            En esta sección aprenderemos los conceptos básicos de JavaScript:
-            variables, tipos de datos, operadores y funciones.
-        </p>
-    </header>
+    <div class="header-sticky">
+        <header class="header">
+            <div class="header__brand">
+                <h1 class="header__title">Fundamentos JavaScript</h1>
+                <img src="img/javascript-1.webp" alt="Logo JavaScript" class="header__logo">
+            </div>
+            <p class="header__text">
+                En esta sección aprenderemos los conceptos básicos de JavaScript:
+                variables, tipos de datos, operadores y funciones.
+            </p>
+        </header>
 
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="index.html">¿Que es JavaScript?</a></li>
-            <li class="nav__item"><a class="nav__link" href="fundamentos.html">Fundamento en JavaScript</a></li>
-            <li class="nav__item"><a class="nav__link" href="control.html">Control de Flujos con JavaScript</a></li>
-        </ul>
-    </nav>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">¿Que es JavaScript?</a></li>
+                <li class="nav__item"><a href="fundamentos.html" class="nav__link">Fundamento en JavaScript</a></li>
+                <li class="nav__item"><a href="control.html" class="nav__link">Control de Flujos con JavaScript</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
 
@@ -168,10 +173,10 @@
 
     </main>
 
-    <footer>
-        <p>Programa ADSO - Ficha 3230489</p>
-        <p>Integrantes: Juan Sebastián Cardona y Luis Alonso Cely</p>
-        <p>© 2026 Mi Sitio JavaScript</p>
+    <footer class="footer">
+        <p class="footer__text">Programa ADSO - Ficha 3230489 - <img class="logo-sena" src="img/logo-sena-verde-png.webp" alt="logo del sena"></p>
+        <p class="footer__text">Integrantes: Juan Sebastián Cardona y Luis Alonso Cely</p>
+        <p class="footer__text">© 2026 Mi Sitio JavaScript <img class="logo-javascript" src="img/javascript-1.webp" alt="logo JavaScript"></p>
     </footer>
 
 </body>
